@@ -1,0 +1,12 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.cta {
+  background: #fafafa;
+  color: #ed1d24;
+  padding: 2;
+}
