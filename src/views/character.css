@@ -1,0 +1,102 @@
+.character-container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  padding: 8rem 4rem;
+  background: linear-gradient(180deg, #951519 0%, #440a0c 100%);
+}
+
+.character-container header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.character-container main {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  padding: 0rem 6rem;
+  justify-content: center;
+  align-items: center;
+  color: #fafafa;
+}
+
+.character-container main div p {
+  color: #ddd;
+  line-height: 1.6rem;
+  max-width: 70ch;
+  font-size: 0.9rem;
+}
+
+.character-container main .left {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 2rem 0rem;
+}
+
+.character-container main .left img {
+  height: 60vh;
+  max-width: 100%;
+}
+.character-container main .left h2 {
+  margin: 3rem 0rem 0.5rem 0rem;
+}
+
+.character-container main .left p {
+  font-size: 0.8rem;
+  color: #aaa;
+}
+
+/* right section  */
+
+.character-container main .right {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  /* overflow-y: scroll; */
+}
+
+.character-container main .right article {
+  margin: 1rem 0rem;
+  padding: 0rem 1rem 0rem 0rem;
+}
+
+.character-container main .right .title {
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  margin: 0.5rem 0rem;
+  color: #fafafa;
+}
+
+.character-container main .right ul {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.character-container main .right ul li {
+  background-color: #951519;
+  color: #ddd;
+  font-size: 0.8rem;
+  font-weight: bold;
+  padding: 0.5rem;
+  margin: 0.4rem;
+  border-radius: 5px;
+}
+
+.character-container main .right a {
+  margin-top: auto;
+  margin-bottom: 3rem;
+  padding: 0.8rem 2.5rem;
+}

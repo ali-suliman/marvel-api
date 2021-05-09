@@ -1,0 +1,66 @@
+.characters-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  background-image: url(../shared/assets/images/marvel_bg.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.characters-container header {
+  position: relative;
+  display: flex;
+  padding: 6rem 4rem 2rem 4rem;
+  flex-direction: column;
+  border-bottom: 4px solid #f8f8f8;
+  background-color: #951519;
+}
+
+.characters-container header .logo {
+  position: absolute;
+  top: 2rem;
+  left: 4rem;
+  max-width: 8rem;
+}
+
+.characters-container header p {
+  color: #fafafa;
+  margin: 4rem 0rem 1rem 0rem;
+  font-size: 1.1rem;
+  font-weight: bold;
+  font-family: "Montserrat", sans-serif;
+}
+
+.characters-container header .ctas {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin: 1rem 0rem;
+}
+
+.characters-container header .ctas input[type="text"] {
+  padding: 1rem 1.5rem;
+  min-width: 25%;
+  border: 1.5px solid #eee;
+  border-radius: 2rem;
+}
+
+.characters-container main {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  background: #fffa;
+}
+
+.back-to-top {
+  position: fixed;
+  bottom: 4rem;
+  right: 4rem;
+  padding: 0.6rem;
+}

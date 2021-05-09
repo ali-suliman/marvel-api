@@ -1,0 +1,56 @@
+.home-container {
+  position: relative;
+  height: 100vh;
+  color: #fafafa;
+  background-image: url(../shared/assets/images/marvel_bg.jpg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: right;
+}
+
+.home-container header {
+  position: absolute;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.home-container header .link-text {
+  color: #eee;
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+
+.home-container main {
+  background: linear-gradient(180deg, #951519 0%, #440a0c 100%);
+  width: 60%;
+  height: 100%;
+  padding: 6rem 0rem 2rem 4rem;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+}
+
+.home-container main button {
+  padding: 1.2rem 3.8rem;
+  text-transform: uppercase;
+}
+
+blockquote {
+  font-family: "Montserrat", sans-serif;
+  font-weight: bolder;
+  text-transform: uppercase;
+  font-size: 4rem;
+  max-width: 10ch;
+  line-height: 4rem;
+  margin: 12vh 0rem 3rem 0rem;
+}
+
+.foot-text {
+  margin-top: auto;
+  max-width: 40ch;
+  color: #aaa;
+  line-height: 1.5rem;
+}

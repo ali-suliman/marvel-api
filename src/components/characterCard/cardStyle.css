@@ -1,8 +1,8 @@
 .character-card {
   background: #fafafa;
-  width: 20rem;
-  height: 26rem;
-  padding: 2rem;
+  width: 18rem;
+  height: 24rem;
+  padding: 1.4rem 1rem;
   margin: 1rem;
   display: flex;
   flex-direction: column;
@@ -17,18 +17,38 @@
 
 .character-card:hover {
   filter: grayscale(0%);
-  transform: translateY(-0.8rem);
-}
-
-.character-card:hover > .character-name {
-  font-size: 1.4rem;
+  transform: translateY(-0.4rem);
 }
 
 .character-name {
   margin: 1rem;
   color: #fafafa;
   font-weight: bolder;
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   text-shadow: 0px 0px 10px #000;
   transition: all 0.4s ease;
+  text-shadow: 1px 2px 2px #000a;
+  font-family: "Montserrat", sans-serif;
+  font-weight: bolder;
+}
+
+.character-card button {
+  background-color: #fff;
+  padding: 0.6rem 2rem;
+  border: none;
+  border-radius: 2rem;
+  font-size: 0.8rem;
+  font-weight: bold;
+  color: #ed1d24;
+  cursor: pointer;
+  transition: all 0.4s ease;
+}
+
+.character-card button::first-letter {
+  text-transform: uppercase;
+}
+
+.character-card button:hover {
+  color: #fff;
+  background-color: #ed1d24;
 }

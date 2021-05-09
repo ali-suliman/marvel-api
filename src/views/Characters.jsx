@@ -1,11 +1,20 @@
 import { useState, useEffect } from "react"
 import { GetAllCharacters } from "../providers/AllCharactersProvider"
 import CharacterCard from "../components/characterCard/CharacterCard"
-import styles from "../shared/styles/home.module.css"
+import { useHistory } from "react-router-dom"
+
+import logo from "../shared/assets/images/marvel_logo.svg"
+
+import styles from "../shared/styles/characters.module.css"
+import btnStyle from "../shared/styles/shared.module.css"
+import Loader from "react-loader-spinner"
+import { RiArrowDropUpLine } from "react-icons/ri"
+import "./characters.css"
 
 const Home = () => {
   const { loading, data, error } = GetAllCharacters()
   const [characters, setCharacters] = useState()
+  const history = useHistory()
 
   useEffect(() => {
     data && setCharacters(data.data.results)
@@ -13,14 +22,34 @@ const Home = () => {
 
   const searchHandler = ({ target }) => {
     const result = data.data.results.filter((character) =>
-      character.name.toLowerCase().includes(target.value)
+      character.name.toLowerCase().includes(target.value.toLowerCase())
     )
     setCharacters(result)
   }
 
+  const clickHandler = () => {
+    history.goBack()
+  }
+
+  const scrollHandlre = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    })
+  }
+
   const charactersList = () => {
     if (loading) {
-      return <p className="loading-text">loading . . .</p>
+      return (
+        <>
+          <Loader
+            width={46}
+            type="TailSpin"
+            color="#951519"
+            style={{ margin: "8rem 0rem" }}
+          />
+        </>
+      )
     } else if (error) {
       return <p className="error-text">{error}</p>
     } else if (data.code != 200) {
@@ -43,21 +72,26 @@ const Home = () => {
   }
 
   return (
-    <div className="wrapper">
+    <div className="wrapper characters-container">
       <header>
-        <h1>This is the home coponents</h1>
-        <input
-          type="text"
-          placeholder="Hulk, Captain Amerika, Abomination . . ."
-          onChange={(e) => searchHandler(e)}
-        />
-        <button onClick={searchHandler}>search</button>
+        <img src={logo} alt="marvel logo" className="logo" />
+        <p>Search for a specific character</p>
+        <section className="ctas">
+          <input
+            type="text"
+            placeholder="Hulk, Captain Amerika, Abomination . . ."
+            onChange={(e) => searchHandler(e)}
+          />
+          <button onClick={clickHandler} className={btnStyle.cta}>
+            go back
+          </button>
+        </section>
       </header>
 
-      <main>
-        <h3>CharactersList</h3>
-        {charactersList()}
-      </main>
+      <main>{charactersList()}</main>
+      <button className={btnStyle.cta + " back-to-top"} onClick={scrollHandlre}>
+        <RiArrowDropUpLine size={32} />
+      </button>
     </div>
   )
 }

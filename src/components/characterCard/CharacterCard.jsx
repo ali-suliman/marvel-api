@@ -1,5 +1,4 @@
 import { useContext } from "react"
-import { NavLink } from "react-router-dom"
 import { CharacterContext } from "../../providers/CharacterProvider"
 import "./cardStyle.css"
 import styles from "../../shared/styles/shared.module.css"
