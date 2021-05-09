@@ -16,7 +16,7 @@ export const fetchAllCharacters = async () => {
 
 export const fetchCharacter = async (ID) => {
   const characterURL = `https://gateway.marvel.com:443/v1/public/characters/${ID}?ts=${ts}&apikey=${process.env.REACT_APP_API_KEY}&hash=${hash}`
-  console.log(characterURL)
+
   const res = await fetch(characterURL, { method: "GET" })
   const data = await res.json()
 

@@ -1,7 +1,6 @@
 import { useContext } from "react"
 import { CharacterContext } from "../../providers/CharacterProvider"
 import "./cardStyle.css"
-import styles from "../../shared/styles/shared.module.css"
 import { useHistory } from "react-router-dom"
 
 const CharacterCard = ({ name, thumbnail, id }) => {
