@@ -1,10 +1,10 @@
 import { useHistory } from "react-router-dom"
-import { GetCharacter } from "../providers/CharacterProvider"
+import { GetCharacter } from "../../providers/CharacterProvider"
 import Loader from "react-loader-spinner"
 
 import "./character.css"
-import styles from "../shared/styles/shared.module.css"
-import logo from "../shared/assets/images/marvel_logo.svg"
+import styles from "../../shared/styles/shared.module.css"
+import logo from "../../shared/assets/images/marvel_logo.svg"
 
 const Character = () => {
   const { loading, data: { data } = {}, error } = GetCharacter()

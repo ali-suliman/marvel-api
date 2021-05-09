@@ -1,8 +1,8 @@
 import React from "react"
-import logo from "../shared/assets/images/marvel_logo.svg"
+import logo from "../../shared/assets/images/marvel_logo.svg"
 import { useHistory } from "react-router-dom"
 import "./home.css"
-import styles from "../shared/styles/shared.module.css"
+import styles from "../../shared/styles/shared.module.css"
 
 const Home = () => {
   const history = useHistory()

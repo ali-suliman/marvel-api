@@ -1,7 +1,7 @@
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom"
-import Home from "../views/Home"
-import Character from "../views/Character"
-import Characters from "../views/Characters"
+import Home from "../views/Home/Home"
+import Character from "../views/Character/Character"
+import Characters from "../views/Characters/Characters"
 
 const Routes = () => (
   <Router>

@@ -1,12 +1,12 @@
 import { useState, useEffect } from "react"
-import { GetAllCharacters } from "../providers/AllCharactersProvider"
-import CharacterCard from "../components/characterCard/CharacterCard"
+import { GetAllCharacters } from "../../providers/AllCharactersProvider"
+import CharacterCard from "../../components/characterCard/CharacterCard"
 import { useHistory } from "react-router-dom"
 
-import logo from "../shared/assets/images/marvel_logo.svg"
+import logo from "../../shared/assets/images/marvel_logo.svg"
 
-import styles from "../shared/styles/characters.module.css"
-import btnStyle from "../shared/styles/shared.module.css"
+import styles from "../../shared/styles/characters.module.css"
+import btnStyle from "../../shared/styles/shared.module.css"
 import Loader from "react-loader-spinner"
 import { RiArrowDropUpLine } from "react-icons/ri"
 import "./characters.css"
