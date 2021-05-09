@@ -2,8 +2,6 @@
   width: 100vw;
   height: 100vh;
   display: flex;
-  padding: 8rem 4rem;
-  background: linear-gradient(180deg, #951519 0%, #440a0c 100%);
 }
 
 .character-container header {
@@ -16,12 +14,15 @@
 
 .character-container main {
   width: 100vw;
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   padding: 0rem 6rem;
   justify-content: center;
   align-items: center;
   color: #fafafa;
+  /* overflow-y: scroll; */
+  background: linear-gradient(180deg, #951519 0%, #440a0c 100%);
+  padding: 8rem 4rem 2rem 4rem;
 }
 
 .character-container main div p {
@@ -43,7 +44,7 @@
 
 .character-container main .left img {
   height: 60vh;
-  max-width: 100%;
+  max-width: 80%;
 }
 .character-container main .left h2 {
   margin: 3rem 0rem 0.5rem 0rem;
@@ -63,7 +64,6 @@
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
-  /* overflow-y: scroll; */
 }
 
 .character-container main .right article {
@@ -96,7 +96,6 @@
 }
 
 .character-container main .right a {
-  margin-top: auto;
-  margin-bottom: 3rem;
+  margin-top: 2rem;
   padding: 0.8rem 2.5rem;
 }

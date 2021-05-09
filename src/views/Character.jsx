@@ -8,7 +8,6 @@ import logo from "../shared/assets/images/marvel_logo.svg"
 
 const Character = () => {
   const { loading, data: { data } = {}, error } = GetCharacter()
-  console.log({ loading, data, error })
   const history = useHistory()
 
   const CharacterSection = () => {
@@ -21,6 +20,8 @@ const Character = () => {
     } else {
       return (
         <>
+          {/* left section */}
+
           <div className="left">
             <img
               src={`${data.data.results[0].thumbnail.path}.${data.data.results[0].thumbnail.extension}`}

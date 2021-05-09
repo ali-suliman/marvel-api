@@ -34,6 +34,10 @@
   font-family: "Montserrat", sans-serif;
 }
 
+.characters-container header p::first-letter {
+  text-transform: uppercase;
+}
+
 .characters-container header .ctas {
   width: 100%;
   display: flex;

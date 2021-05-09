@@ -13,7 +13,7 @@ const Home = () => {
   return (
     <div className="wrapper home-container">
       <header>
-        <img src={logo} alt="" />
+        <img src={logo} alt="marvel logo" />
         <a
           href="https://developer.marvel.com/"
           target="_blank"
@@ -28,8 +28,8 @@ const Home = () => {
           view all characters
         </button>
         <p className="foot-text">
-          A simple webpage that displays marverl characters and some information
-          about them.
+          simple webpage that displays a selection of marverl characters and
+          some information about them.
         </p>
       </main>
     </div>

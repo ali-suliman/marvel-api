@@ -10,6 +10,7 @@ const CharacterCard = ({ name, thumbnail, id }) => {
 
   const clickHandler = () => {
     setCharacterId(id)
+    localStorage.setItem("id", id)
     history.push("character")
   }
 

@@ -20,9 +20,14 @@ export const CharacterProvider = ({ children }) => {
 }
 
 export const GetCharacter = () => {
-  const { characterState, setCharacterState, characterId } = useContext(
-    CharacterContext
-  )
+  const {
+    characterState,
+    setCharacterState,
+    characterId,
+    setCharacterId,
+  } = useContext(CharacterContext)
+
+  !characterId && setCharacterId(localStorage.getItem("id"))
 
   useEffect(() => fetchData(), [characterId])
 

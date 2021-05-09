@@ -75,7 +75,7 @@ const Home = () => {
     <div className="wrapper characters-container">
       <header>
         <img src={logo} alt="marvel logo" className="logo" />
-        <p>Search for a specific character</p>
+        <p>filter character by name</p>
         <section className="ctas">
           <input
             type="text"
