@@ -25,17 +25,17 @@ export const GetAllCharacters = () => {
   const fetchData = async () => {
     try {
       const res = await fetchAllCharacters()
-      setCharactersState({
+      setCharactersState((prevState) => ({
+        ...prevState,
         loading: false,
         data: res,
-        error: null,
-      })
+      }))
     } catch (error) {
-      setCharactersState({
+      setCharactersState((prevState) => ({
+        ...prevState,
         loading: false,
-        data: null,
         error: error,
-      })
+      }))
     }
   }
 

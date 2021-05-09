@@ -39,20 +39,20 @@ export const GetCharacter = () => {
     })
     try {
       const res = await fetchCharacter(characterId)
-      setCharacterState({
+      setCharacterState((prevState) => ({
+        ...prevState,
         loading: false,
         data: {
           id: characterId,
           data: res,
         },
-        error: null,
-      })
+      }))
     } catch (error) {
-      setCharacterState({
+      setCharacterState((prevState) => ({
+        ...prevState,
         loading: false,
-        data: { id: null, data: null },
         error: error,
-      })
+      }))
     }
   }
 
